@@ -3,6 +3,10 @@
 body {
 }
 
+a {
+  text-decoration: none;
+}
+
 img.card {
   height: 100px;
   width: 100px;
@@ -27,5 +31,5 @@ img.card {
 }
 
 .scoreboard {
-  font-size: 25px;
+  font-size: 23px;
 }
