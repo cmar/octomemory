@@ -1,9 +1,7 @@
 function Card(image) {
-  this.states = ['hidden', 'selected', 'matched']
   this.image = image
   this.order = Math.random() * 1000
   this.score = 0
-
   this.hiddenImage = "http://octodex.github.com/images/original.png"
 
   this.$el = $("<img></img>")
