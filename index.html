@@ -1,0 +1,79 @@
+<head>
+  <title>OctoMemory</title>
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="memory.js"></script>
+</head>
+
+<style>
+  body {
+  }
+
+  img.card {
+    height: 100px;
+    width: 100px;
+    margin-left: 5px;
+  }
+
+  .matched {
+    opacity: 0.4;
+  }
+
+  #header {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #F9F9F9;
+    margin: 40px auto 60px;
+    padding: 10px;
+    width: 840px;
+  }
+
+  #board {
+    margin: 20px auto 60px;
+    width: 840px;
+  }
+
+  .scoreboard {
+    font-size: 25px;
+  }
+
+</style>
+
+<div id="header">
+  <h1>OctoMemory</h1>
+  <p class="scoreboard">
+    score:<span id="score">0</span>
+    clicks:<span id="clicks">0</span>
+  </p>
+  <a href="#" id="cheat">cheat</a>
+  <a href="#" id="reset">reset</a>
+</div>
+
+<div id="board">
+</div>
+
+<div id="images"  style="display:none">
+  <img src="http://octodex.github.com/images/trekkie.png">
+  <img src="http://octodex.github.com/images/ironcat.jpg">
+  <img src="http://octodex.github.com/images/okal-eltocat.jpg">
+  <img src="http://octodex.github.com/images/xtocat.jpg">
+  <img src="http://octodex.github.com/images/scarletteocat.jpg">
+  <img src="http://octodex.github.com/images/oktobercat.png">
+  <img src="http://octodex.github.com/images/femalecodertocat.png">
+  <img src="http://octodex.github.com/images/daftpunktocat-thomas.gif">
+  <img src="http://octodex.github.com/images/daftpunktocat-guy.gif">
+  <img src="http://octodex.github.com/images/murakamicat.png">
+  <img src="http://octodex.github.com/images/droidtocat.png">
+  <img src="http://octodex.github.com/images/foundingfather_v2.png">
+  <img src="http://octodex.github.com/images/heisencat.png">
+  <img src="http://octodex.github.com/images/kimonotocat.png">
+  <img src="http://octodex.github.com/images/goretocat.png">
+  <img src="http://octodex.github.com/images/megacat-2.png">
+  <img src="http://octodex.github.com/images/stormtroopocat.png">
+  <img src="http://octodex.github.com/images/homercat.png">
+  <img src="http://octodex.github.com/images/twenty-percent-cooler-octocat.png">
+  <img src="http://octodex.github.com/images/doctocat-brown.jpg">
+  <img src="http://octodex.github.com/images/dojocat.jpg">
+  <img src="http://octodex.github.com/images/linktocat.jpg">
+  <img src="http://octodex.github.com/images/plumber.jpg">
+  <img src="http://octodex.github.com/images/octocat-de-los-muertos.jpg">
+</div>
