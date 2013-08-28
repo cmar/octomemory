@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+
+body {
+}
+
+img.card {
+  height: 100px;
+  width: 100px;
+  margin-left: 5px;
+}
+
+.matched {
+  opacity: 0.4;
+}
+
+#header {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #F9F9F9;
+  margin: 40px auto 60px;
+  padding: 10px;
+  width: 840px;
+}
+
+#board {
+  margin: 20px auto 60px;
+  width: 840px;
+}
+
+.scoreboard {
+  font-size: 25px;
+}

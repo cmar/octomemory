@@ -1,51 +1,19 @@
 <head>
   <title>OctoMemory</title>
-  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="memory.css">
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="memory.js"></script>
 </head>
 
-<style>
-  body {
-  }
-
-  img.card {
-    height: 100px;
-    width: 100px;
-    margin-left: 5px;
-  }
-
-  .matched {
-    opacity: 0.4;
-  }
-
-  #header {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #F9F9F9;
-    margin: 40px auto 60px;
-    padding: 10px;
-    width: 840px;
-  }
-
-  #board {
-    margin: 20px auto 60px;
-    width: 840px;
-  }
-
-  .scoreboard {
-    font-size: 25px;
-  }
-
-</style>
-
 <div id="header">
-  <h1>OctoMemory</h1>
+  <h1>OctoMemory by <a href="https://github.com/cmar">@cmar</a></h1>
+  <p>find matching octocats</p>
   <p class="scoreboard">
     score:<span id="score">0</span>
     clicks:<span id="clicks">0</span>
+    <a href="#" id="cheat">cheat</a>
+    <a href="#" id="reset">reset</a>
   </p>
-  <a href="#" id="cheat">cheat</a>
-  <a href="#" id="reset">reset</a>
 </div>
 
 <div id="board">
