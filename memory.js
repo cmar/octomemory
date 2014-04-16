@@ -33,65 +33,66 @@ Card.prototype.matches = function(other) {
   return this.image == other.image
 }
 
-var board = {
-  start: function() {
-    this.cards = []
-    $("#board").empty();
-
-    $("#score").text(0)
-    $("#clicks").text(0)
-
-    $("#images").children("img").each(function() {
-      var image = $(this).attr('src')
-      board.cards.push(new Card(image))
-      board.cards.push(new Card(image))
-    })
-
-    this.cards.sort(function(a, b) {
-      return b.order - a.order;
-    })
-
-    this.cards.forEach(function(card) {
-      $("#board").append(card.$el);
-    })
-  },
-
-  selected: function() {
-    return this.cards.filter(function(card) {
-      return card.state === 'selected'
-    })
-  },
-
-  checkMatches: function() {
-    var selected = this.selected()
-
-    if (selected.length != 2) {
-      return;
-    }
-
-    if (selected[0].matches(selected[1])) {
-      selected.forEach(function(card) {
-        card.changeState('matched')
-        board.updateScore()
-      })
-    } else {
-      selected.forEach(function(card) {
-        setTimeout(function() {
-          card.changeState('hidden')
-        }, 1000)
-      })
-    }
-  },
-
-  updateScore: function() {
-    var score = board.cards.reduce(function(score, card) {
-      return score + card.score;
-    }, 0)
-    $("#score").text(score);
-  }
-}
 
 $(function() {
+  var board = {
+    start: function() {
+      this.cards = []
+      $("#board").empty();
+
+      $("#score").text(0)
+      $("#clicks").text(0)
+
+      $("#images").children("img").each(function() {
+        var image = $(this).attr('src')
+        board.cards.push(new Card(image))
+        board.cards.push(new Card(image))
+      })
+
+      this.cards.sort(function(a, b) {
+        return b.order - a.order;
+      })
+
+      this.cards.forEach(function(card) {
+        $("#board").append(card.$el);
+      })
+    },
+
+    selected: function() {
+      return this.cards.filter(function(card) {
+        return card.state === 'selected'
+      })
+    },
+
+    checkMatches: function() {
+      var selected = this.selected()
+
+      if (selected.length != 2) {
+        return;
+      }
+
+      if (selected[0].matches(selected[1])) {
+        selected.forEach(function(card) {
+          card.changeState('matched')
+          board.updateScore()
+        })
+      } else {
+        selected.forEach(function(card) {
+          setTimeout(function() {
+            card.changeState('hidden')
+          }, 1000)
+        })
+      }
+    },
+
+    updateScore: function() {
+      var score = board.cards.reduce(function(score, card) {
+        return score + card.score;
+      }, 0)
+      $("#score").text(score);
+    }
+  }
+
   board.start()
 
   $("#board").on("click", ".card", function(event) {
